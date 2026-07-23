@@ -1,0 +1,49 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #app { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--c-bg);
+  color: var(--c-text);
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a { color: var(--c-primary); }
+a:focus-visible { outline: 2px solid var(--c-focus); outline-offset: 2px; border-radius: 2px; }
+
+h1, h2, h3, h4 { line-height: 1.25; }
+
+button:focus-visible { outline: 2px solid var(--c-focus); outline-offset: 2px; }
+
+/* Iconos lucide-vue: alinear con texto en contextos inline. */
+.lucide,
+svg.lucide {
+  display: inline-block;
+  vertical-align: -0.18em;
+  flex-shrink: 0;
+}
+button .lucide,
+a .lucide {
+  pointer-events: none;
+}
+
+/* Shell común para vistas autenticadas (Navbar + contenido + Footer) */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg);
+}
+.app-shell > .page {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2rem;
+}

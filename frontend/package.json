@@ -1,0 +1,35 @@
+{
+  "name": "syncbox-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json",
+    "dev:vite": "vite --host 0.0.0.0",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "lint": "eslint . --ext .ts,.vue --max-warnings 0",
+    "format": "prettier -w .",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.16.0",
+    "@types/d3": "^7.4.3",
+    "d3": "^7.9.0",
+    "pinia": "^2.2.4",
+    "three": "^0.169.0",
+    "vue": "^3.5.12",
+    "vue-i18n": "^11.4.7",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.40",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/tsconfig": "^0.5.1",
+    "nodemon": "^3.1.11",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.10"
+  }
+}

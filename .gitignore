@@ -1,0 +1,32 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+coverage/
+.cache/
+.vite/
+
+# Backups/exportaciones locales
+*.dump
+backup-*.sql
+*.tgz
+*.tar.gz
+*.zip
+
+# Recursos subidos/generados fuera del codigo fuente
+recursos/
+uploads/
+modelos3d/
+*.glb
+*.gltf
+
+*.log
+*.tmp
+*.bak
+*.old
+
+.DS_Store
+Thumbs.db
+.vscode/

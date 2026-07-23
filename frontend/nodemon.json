@@ -1,0 +1,19 @@
+{
+  "watch": [
+    "src",
+    "index.html",
+    "vite.config.ts",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "env.d.ts"
+  ],
+  "ext": "vue,ts,js,json,css,html",
+  "ignore": [
+    "dist",
+    "node_modules"
+  ],
+  "exec": "npm run dev:vite",
+  "legacyWatch": true,
+  "delay": "200",
+  "signal": "SIGTERM"
+}

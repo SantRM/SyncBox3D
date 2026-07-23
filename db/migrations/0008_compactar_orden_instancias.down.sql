@@ -1,0 +1,2 @@
+-- No es posible reconstruir los huecos historicos de `orden` despues de
+-- compactarlos. La identidad de cada copia vive en escena_instancia.id.

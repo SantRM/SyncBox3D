@@ -1,0 +1,22 @@
+# Override para despliegue en Proxmox/servidor.
+#
+# Uso:
+#   1) Definir RESOURCE_HOST_PATH en .env, por ejemplo:
+#        RESOURCE_HOST_PATH=/srv/syncbox/recursos
+#   2) Levantar con:
+#        docker compose -f docker-compose.yml -f docker-compose.proxmox.yml up -d --build
+#
+# El backend sigue viendo los recursos en /data/syncbox/recursos, pero Docker
+# los guarda en una carpeta real del host para facilitar backups, capacidad y
+# montaje de discos/ZFS.
+#
+# El compose base ya limita Postgres y backend a 127.0.0.1 por defecto. En un
+# servidor normal solo deberia quedar publicado el frontend, o el reverse proxy
+# que pongas delante de el.
+
+services:
+  backend:
+    volumes:
+      - type: bind
+        source: ${RESOURCE_HOST_PATH:?define RESOURCE_HOST_PATH en .env}
+        target: /data/syncbox/recursos

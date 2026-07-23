@@ -1,0 +1,12 @@
+{
+  "name": "syncbox-integration-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test syncbox.integration.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
